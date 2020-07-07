@@ -343,9 +343,9 @@ mutations: {
 
 既然 Vuex 的 `store` 中的状态是响应式的，那么当我们变更状态时，监视状态的 Vue 组件也会自动更新。	
 
-1. 最好提前在你的 store 中初始化好所有所需属性
+1. 最好提前在你的 store 中初始化好所有所需属性  state.info['address'] = '洛杉矶'，address属性不是响应式的
 
-2. 使用 Vue.set(obj, 'newProp', 123)
+2. 使用 Vue.set(obj, 'newProp', 123)  newProp是响应式的
 
 3. 以新对象替换老对象。例如，利用对象展开运算符我们可以这样写：state.obj = { ...state.obj, newProp: 123 }
 
